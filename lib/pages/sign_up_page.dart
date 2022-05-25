@@ -62,6 +62,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       onPressed: _onSignUpPressed,
                       title: Strings.signUp,
                       size: const Size(350, 60),
+                      textGradient: AppColors.defaultVerticalGradient,
                     ),
                     const SizedBox(
                       height: 10,

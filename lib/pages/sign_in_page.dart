@@ -40,11 +40,8 @@ class _SignInPageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [AppColors.subColor, AppColors.mainColor])),
+      decoration:
+          const BoxDecoration(gradient: AppColors.defaultVerticalGradient),
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: Colors.transparent,
@@ -89,7 +86,10 @@ class _SignInPageState extends State<SignInPage> {
                       ),
                     ])),
                 TextShadowButton(
-                    onPressed: _onGetStartPressed, title: Strings.getStarted),
+                  onPressed: _onGetStartPressed,
+                  title: Strings.getStarted,
+                  textGradient: AppColors.defaultHorizontalGradient,
+                ),
                 const SizedBox(
                   height: 30,
                 ),

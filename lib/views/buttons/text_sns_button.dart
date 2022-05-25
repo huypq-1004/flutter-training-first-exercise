@@ -1,3 +1,4 @@
+import 'package:conn_exion/views/gradient-text.dart';
 import 'package:flutter/material.dart';
 import '../../constants.dart';
 import 'text_shadow_button.dart';
@@ -18,7 +19,7 @@ class TextSNSButton extends StatelessWidget {
   final String title;
   final Size size;
 
-  Image _getImage() {
+  Widget _getImage() {
     String assetURLString = "";
     double height = 0;
     switch (style) {
@@ -31,16 +32,23 @@ class TextSNSButton extends StatelessWidget {
         height = 20;
         break;
     }
-    return Image.asset(
-      assetURLString,
-      height: height,
-      color: AppColors.mainColor,
-    );
+    return GradientImage(
+        image: Image.asset(
+          assetURLString,
+          height: height,
+          color: AppColors.mainColor,
+        ),
+        gradient: AppColors.defaultVerticalGradient);
   }
 
   @override
   Widget build(BuildContext context) {
     return TextShadowButton(
-        onPressed: onPressed, size: size, title: title, image: _getImage());
+      onPressed: onPressed,
+      size: size,
+      title: title,
+      image: _getImage(),
+      textGradient: AppColors.defaultVerticalGradient,
+    );
   }
 }

@@ -18,4 +18,12 @@ class Strings {
 class AppColors {
   static const mainColor = Color.fromRGBO(250, 58, 110, 1);
   static const subColor = Color.fromRGBO(252, 118, 71, 1);
+  static const defaultVerticalGradient = LinearGradient(
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+      colors: [AppColors.subColor, AppColors.mainColor]);
+  static const defaultHorizontalGradient = LinearGradient(
+      begin: Alignment.centerRight,
+      end: Alignment.centerLeft,
+      colors: [AppColors.subColor, AppColors.mainColor]);
 }

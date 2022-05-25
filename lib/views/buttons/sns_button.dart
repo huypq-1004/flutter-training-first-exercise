@@ -1,3 +1,4 @@
+import 'package:conn_exion/views/gradient-text.dart';
 import 'package:flutter/material.dart';
 import '../../constants.dart';
 import 'shadow_button.dart';
@@ -16,7 +17,7 @@ class SNSButton extends StatelessWidget {
   final SNSButtonStyle style;
   final double size;
 
-  Image _getImage() {
+  Widget _getImage() {
     String assertURLString = "";
     double height = 0;
     switch (style) {
@@ -29,11 +30,14 @@ class SNSButton extends StatelessWidget {
         height = 20;
         break;
     }
-    return Image.asset(
-      assertURLString,
-      height: height,
-      fit: BoxFit.fitHeight,
-      color: AppColors.mainColor,
+    return GradientImage(
+      image: Image.asset(
+        assertURLString,
+        height: height,
+        fit: BoxFit.fitHeight,
+        color: AppColors.mainColor,
+      ),
+      gradient: AppColors.defaultVerticalGradient,
     );
   }
 
