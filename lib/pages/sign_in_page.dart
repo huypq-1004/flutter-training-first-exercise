@@ -42,11 +42,9 @@ class _SignInPageState extends State<SignInPage> {
     return Container(
       decoration:
           const BoxDecoration(gradient: AppColors.defaultVerticalGradient),
-      child: Scaffold(
-        resizeToAvoidBottomInset: false,
-        backgroundColor: Colors.transparent,
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      child: Container(
+        color: Colors.transparent,
+        child: Stack(
           children: [
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -117,21 +115,27 @@ class _SignInPageState extends State<SignInPage> {
                     onPressed: _onForgotPasswordPressed)
               ],
             ),
-            Container(
-              color: Colors.black45,
-              height: 84,
-              child:
-                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                const Text(
-                  Strings.dontHaveAccount,
-                  style: TextStyle(
-                      color: AppColors.subColor, fontWeight: FontWeight.w400),
-                ),
-                UnderlineTextButton(
-                    text: Strings.signUp.toUpperCase(),
-                    onPressed: _onSignUpPressed)
-              ]),
-            ),
+            Positioned(
+                right: 0,
+                left: 0,
+                bottom: 0,
+                height: 84,
+                child: Container(
+                  color: Colors.black45,
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          Strings.dontHaveAccount,
+                          style: TextStyle(
+                              color: AppColors.subColor,
+                              fontWeight: FontWeight.w400),
+                        ),
+                        UnderlineTextButton(
+                            text: Strings.signUp.toUpperCase(),
+                            onPressed: _onSignUpPressed)
+                      ]),
+                )),
           ],
         ),
       ),

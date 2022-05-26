@@ -1,4 +1,4 @@
-import 'package:conn_exion/views/gradient-text.dart';
+import '../gradient-image.dart';
 import 'package:flutter/material.dart';
 import '../../constants.dart';
 import 'text_shadow_button.dart';

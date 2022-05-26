@@ -1,6 +1,6 @@
 # conn_exion
 
-A new Flutter project.
+An implementation of the first exercise Fullter Training Course from @huypq-1004 at Sun Asterisk Inc.
 
 ## Getting Started
 

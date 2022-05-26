@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Conn Exion',
       theme: ThemeData(primarySwatch: Colors.amber, fontFamily: 'Montserrat'),
-      home: const SignInPage(),
+      home: const Material(child: SignInPage()),
     );
   }
 }
